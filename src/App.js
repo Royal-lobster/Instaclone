@@ -6,7 +6,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import { Button } from "@material-ui/core";
 import ImageUpload from "./ImageUpload";
+import Footer from "./Footer";
 
+// styles for modal copied from material ui
 function getModalStyle() {
   const top = 50;
   const left = 50;
@@ -29,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// App component starts here
 function App() {
   const classes = useStyles();
   const [modalStyle] = React.useState(getModalStyle);
@@ -42,6 +45,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [user, setUser] = useState(null);
 
+  //use effects lie here
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
       if (authUser) {
@@ -70,6 +74,7 @@ function App() {
       });
   }, []);
 
+  //functions for handling signup and signin
   const signUp = (e) => {
     e.preventDefault();
     auth
@@ -222,9 +227,12 @@ function App() {
               caption={post.caption}
               imageUrl={post.imageUrl}
               avatarUrl={post.avatarUrl}
+              postId={id}
+              user={user}
             />
           ))}
         </div>
+        <Footer />
       </div>
     </div>
   );

@@ -29,7 +29,37 @@
   padding: 15px;
   font-size: 14px;
 }
+.post__commentBox {
+  display: flex;
+  margin-top: 10px;
+  border-top: 1px solid lightgray;
+}
+.post__input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+}
+.post__button {
+  flex: 0;
+  color: #a1a1a1;
+}
+.post__comments {
+  padding-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.post__comments-tag {
+  font-size: 14px;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: #a1a1a1;
+  border-bottom: 1px solid #ececec;
+  flex: 0;
+}
 
+.post__comments p {
+  font-size: 14px;
+}
 @media only screen and (min-width: 582px) and (max-width: 1000px) {
   .post {
     margin: 30px 0px;
@@ -39,8 +69,8 @@
   .post {
     max-width: none;
     width: 100%;
-    background-color: #fafafa;
-    border: none;
+    background-color: #ffffff;
+    /* border: none; */
     margin: 0px 0px 20px 0px;
   }
 }

@@ -7,6 +7,8 @@
   overflow: hidden;
 }
 .app__header {
+  position: fixed;
+  z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -22,6 +24,7 @@
   background-color: #fff;
 }
 .app__main {
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,7 +75,6 @@ button {
 }
 
 .login-to-uploadmsg {
-  margin-top: 20px;
   background-color: white;
   padding: 20px 30px;
   font-weight: 400;
@@ -86,5 +88,8 @@ button {
   }
   .header-btn {
     margin-right: 30px !important;
+  }
+  .login-to-uploadmsg {
+    margin-bottom: 20px;
   }
 }
