@@ -1,5 +1,5 @@
 # instagramclone-reactjs
 check out the running app
-https://royal-lobster-instagram-clone.web.app/
+https://instadup.netlify.app/
 
 <img src="./screenshot.png"/>
